@@ -1,0 +1,68 @@
+/* font selections
+sanserif: Inter reg, bold
+serif: Lora reg, bold, bolditalic
+mono: Inconsolata reg, bold
+*/
+
+/* theme selections: light & dark */
+
+/* font sizes: 24, 20, 18, 14 */
+
+/* line heights: 29, 24, 17 */
+
+/* comp sizes: 375px, 768px, 1440px w/ 736px content width for header, search, br, but a little extra padding on the right in the text sections */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap');
+
+.app {
+  --sanserif: 'Inter', sans-serif;
+  --serif: 'Lora', serif;
+  --mono: 'Inconsolata', monospace;
+
+  --gray1: #050505;
+  --gray2: #1F1F1F;
+  --gray3: #2D2D2D;
+  --gray4: #3A3A3A;
+  --gray5: #757575;
+  /* drawn borders are gray6 */
+  --gray6: #E9E9E9;
+  --gray7: #F4F4F4;
+  --purple: #A445ED;
+  --red: #FF5252;
+
+  background-color: white;
+  color: var(--gray3);
+  
+  /* 1rem = 16px */
+  --s29: 1.8125rem;
+  --s24: 1.5rem;
+  --s20: 1.25rem;
+  --s18: 1.125rem;
+  --s17: 1.0625rem;
+  --s14: 0.875rem;
+
+  /* top padding should go up to 58px, side 32px */
+  padding-top: clamp(1.5rem, 5vmax, 3.625rem);
+  padding-bottom: clamp(1.5rem, 5vmax, 3.625rem);
+  padding-left: clamp(24px, 3vmax, 32px);
+  padding-right: clamp(24px, 3vmax, 32px);
+}
+
+.app.darkmode {
+  background-color: var(--gray1);
+  color: var(--gray5);
+}
+
+.app.sanserif {
+  font-family: var(--sanserif);
+}
+
+.app.serif {
+  font-family: var(--serif);
+}
+
+.app.mono {
+  font-family: var(--mono);
+}

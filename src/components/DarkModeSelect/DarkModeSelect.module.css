@@ -1,0 +1,7 @@
+
+/* this element (toggle plus icon together) is 20px high at all screen sizes */
+
+.toggle {
+    display: flex;
+    flex-direction: row;
+}

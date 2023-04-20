@@ -8,10 +8,11 @@ function Header() {
   return (
     <header className={styles.header}>
       <div>
-        <img src={logo} alt="Dictionary Search logo"/>
+        <img className={styles.logo} src={logo} alt="Dictionary Search logo"/>
       </div>
       <div className={styles.selectors}>
         <FontSelect />
+        <div className={styles.divider}></div>
         <DarkModeSelect />
       </div>
     </header>);

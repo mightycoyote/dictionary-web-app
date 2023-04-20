@@ -1,8 +1,25 @@
 .header {
     display: flex;
     justify-content: space-between;
+    /* should be 32px to 36.5px tall */
+    height: clamp(2rem, 1vw, 2.25rem);
+    align-items: center;
+}
+
+.logo {
+    height: 100%;
 }
 
 .selectors {
     display: flex;
+    font-size: var(--s14);
+}
+
+.divider {
+    width: 1px;
+    background-color: var(--gray6);
+    margin-top: 0px;
+    margin-bottom: 0px; 
+    margin-left: max(10px, 1vw);
+    margin-right: max(10px, 1vw);
 }
