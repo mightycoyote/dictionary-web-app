@@ -21,6 +21,8 @@ mono: Inconsolata reg, bold
   --serif: 'Lora', serif;
   --mono: 'Inconsolata', monospace;
 
+  font-family: var(--sanserif);
+
   --gray1: #050505;
   --gray2: #1F1F1F;
   --gray3: #2D2D2D;
@@ -34,14 +36,16 @@ mono: Inconsolata reg, bold
 
   background-color: white;
   color: var(--gray3);
-  
-  /* 1rem = 16px */
+
+  /* 1rem = 16px
+  --s77: 4.8125rem;
+  --s64: 4rem;
   --s29: 1.8125rem;
   --s24: 1.5rem;
   --s20: 1.25rem;
   --s18: 1.125rem;
   --s17: 1.0625rem;
-  --s14: 0.875rem;
+  --s14: 0.875rem; */
 
   /* top padding should go up to 58px, side 32px */
   padding-top: clamp(1.5rem, 5vmax, 3.625rem);
@@ -55,7 +59,7 @@ mono: Inconsolata reg, bold
   color: var(--gray5);
 }
 
-.app.sanserif {
+/* .app.sanserif {
   font-family: var(--sanserif);
 }
 
@@ -65,4 +69,9 @@ mono: Inconsolata reg, bold
 
 .app.mono {
   font-family: var(--mono);
+} */
+
+.wrapper {
+  max-width: 46rem;
+  margin: 0 auto;
 }

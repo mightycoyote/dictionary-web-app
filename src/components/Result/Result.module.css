@@ -1,0 +1,18 @@
+.wordheader {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wordheader h1 {
+    font-weight: 700;
+    font-size: clamp(2rem, 11vw, 4rem)
+}
+
+.wordheader p {
+    color: var(--purple);
+    /* body M up to heading M  */
+    font-size: clamp(1.125rem, 3vw, 1.5rem);
+    /* add line-height change also */
+}

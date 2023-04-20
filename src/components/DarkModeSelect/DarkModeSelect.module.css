@@ -1,7 +1,9 @@
 
 /* this element (toggle plus icon together) is 20px high at all screen sizes */
 
-.toggle {
+.toggle label {
     display: flex;
     flex-direction: row;
+    height: 1.25rem;
+    gap: 10px;
 }

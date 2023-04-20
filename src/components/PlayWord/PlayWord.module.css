@@ -1,0 +1,4 @@
+.button {
+    /* 48px mobile, 75px tablet (768px) and above */
+    height: clamp(48px, 11vw, 75px);
+}

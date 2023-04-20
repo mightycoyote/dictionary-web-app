@@ -1,4 +1,5 @@
 import React from 'react';
+import '@coreui/coreui/dist/css/coreui.min.css';
 import './App.css';
 import Header from './components/Header';
 import Search from './components/Search';
@@ -6,14 +7,17 @@ import Search from './components/Search';
 import Result from './components/Result';
 
 function App() {
-  const [classes, setClasses] = React.useState('app sanserif');
+  // set darkmode by adding and removing class dark, fonts maybe the same way 
+  // const [classes, setClasses] = React.useState('app');
 
   return (
-    <div className={classes}>
-      <Header />
-      <Search />
-      {/* <NoResult /> */}
-      <Result />
+    <div className="app">
+      <div className="wrapper">
+        <Header />
+        <Search />
+        {/* <NoResult /> */}
+        <Result />
+      </div>
     </div>
   );
 }

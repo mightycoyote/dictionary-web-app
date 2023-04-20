@@ -12,7 +12,6 @@
 
 .selectors {
     display: flex;
-    font-size: var(--s14);
 }
 
 .divider {
