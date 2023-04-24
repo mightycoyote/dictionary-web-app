@@ -23,6 +23,9 @@ mono: Inconsolata reg, bold
 
   font-family: var(--sanserif);
 
+  /* font-size for the main text, which is the definition bullets here */
+  font-size: clamp(0.9375rem, 3vw, 1.125rem);
+
   --gray1: #050505;
   --gray2: #1F1F1F;
   --gray3: #2D2D2D;
@@ -37,15 +40,33 @@ mono: Inconsolata reg, bold
   background-color: white;
   color: var(--gray3);
 
-  /* 1rem = 16px
+  /* 1rem = 16px */
+  /* 
   --s77: 4.8125rem;
   --s64: 4rem;
   --s29: 1.8125rem;
   --s24: 1.5rem;
-  --s20: 1.25rem;
+  --s20: 1.25rem;ß
   --s18: 1.125rem;
   --s17: 1.0625rem;
-  --s14: 0.875rem; */
+  --s15: 0.9375rem;
+  --s14: 0.875rem; 
+  */
+ 
+
+  /* clamp settings for fonts */
+  /* 
+  --c14-to-18: clamp(0.875rem, 3vw, 1.125rem);
+  --c15-to-18: clamp(0.9375rem, 3vw, 1.125rem); 
+  --c18-to-24: clamp(1.125rem, 3vw, 1.5rem);
+  --c32-to-64: clamp(2rem, 11vw, 4rem);
+  */
+
+  /* for line heights */
+  /* 
+  --c20-to-24: clamp(1.25rem, 2.5vw, 1.5rem);
+  --c24-to-29: clamp(1.5rem, 4vw, 1.8125rem);
+  */
 
   /* top padding should go up to 58px, side 32px */
   padding-top: clamp(1.5rem, 5vmax, 3.625rem);
