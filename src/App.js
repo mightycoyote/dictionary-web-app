@@ -9,9 +9,10 @@ import Result from './components/Result';
 function App() {
   const ENDPOINT = 'https://api.dictionaryapi.dev/api/v2/entries/en/';
   const [result, setResult] = React.useState(null);
+  // const [searchTerm, setSearchTerm] = React.useState('');
 
   async function handleSubmit(search) {
-
+    // setSearchTerm(search);
     const response = await fetch(`${ENDPOINT}${search}`);
     const json = await response.json();
     setResult(json);
@@ -28,7 +29,7 @@ function App() {
           handleSubmit={handleSubmit}
         />
         {/* <NoResult /> */}
-        {result && <Result result={result} />}
+        {result && <Result result={result} handleSubmit={handleSubmit} />}
       </div>
     </div>
   );

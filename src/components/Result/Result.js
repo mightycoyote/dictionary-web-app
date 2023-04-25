@@ -5,7 +5,7 @@ import newwindow from '../../assets/images/icon-new-window.svg'
 import EntrySection from '../EntrySection/EntrySection';
 
 
-function Result({result}) {
+function Result({result, handleSubmit}) {
 
   // so really display needs to be for each meaning (there can be multiple) in each array item (there can be multiple)
   // but, it only needs to read the word, phonetics, and audio once
@@ -15,11 +15,6 @@ function Result({result}) {
   // may have to search through phonetics array in wordInfo to find the first one that has audio for PlayWord
   const wordInfo = result[0];
   const allEntries = result.map(entry => entry.meanings);
- 
-  // console.log(result);
-  console.log(wordInfo);
-  // console.log(allEntries);
-
 
   return (
     <>
@@ -33,9 +28,8 @@ function Result({result}) {
         </div>
       </div>
 
-     {allEntries.map(entry => (
-      // console.log(entry)
-      <EntrySection entry={entry} />
+     {allEntries.map((entry) => (
+      <EntrySection entry={entry} handleSubmit={handleSubmit} key={crypto.randomUUID()}/>
      ))}
      
       <div className={styles.source}>
