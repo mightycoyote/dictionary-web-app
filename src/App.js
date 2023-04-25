@@ -7,6 +7,16 @@ import Search from './components/Search';
 import Result from './components/Result';
 
 function App() {
+  const ENDPOINT = 'https://api.dictionaryapi.dev/api/v2/entries/en/';
+  const [result, setResult] = React.useState(null);
+
+  async function handleSubmit(search) {
+
+    const response = await fetch(`${ENDPOINT}${search}`);
+    const json = await response.json();
+    setResult(json);
+  }
+
   // set darkmode by adding and removing class dark, fonts maybe the same way 
   // const [classes, setClasses] = React.useState('app');
 
@@ -14,9 +24,11 @@ function App() {
     <div className="app">
       <div className="wrapper">
         <Header />
-        <Search />
+        <Search
+          handleSubmit={handleSubmit}
+        />
         {/* <NoResult /> */}
-        <Result />
+        {result && <Result result={result} />}
       </div>
     </div>
   );

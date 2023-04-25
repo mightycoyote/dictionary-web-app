@@ -17,56 +17,6 @@
     line-height: clamp(1.5rem, 4vw, 1.8125rem);
 }
 
-.partofspeechsection {
-    margin: 1rem 0;
-}
-
-.partofspeechsection h2 {
-    font-weight: 700;
-    font-style: italic;
-    margin-bottom: 1rem;
-}
-
-.partofspeechsection h3 {
-    color: var(--gray5);
-    font-weight: 400;
-    font-size: clamp(1rem, 2.5vw, 1.25rem);
-    line-height: clamp(1.25rem, 2.5vw, 1.5rem);
-}
-
-.partofspeechsection ul {
-    margin-bottom: 2rem;
-}
-
-.partofspeechsection li {
-    margin-bottom: .5rem;
-}
-
-.meaningh3 {
-    margin: .75rem 0;
-}
-
-.synonymssection {
-    font-size: clamp(1rem, 2.5vw, 1.25rem);
-    line-height: clamp(1.25rem, 2.5vw, 1.5rem);
-    display: flex;
-    gap: clamp(10px, 2vw, 20px);
-}
-
-.synonymsh3 {
-    margin: 0;
-}
-
-.synonymssection > * {
-    margin: 0;
-}
-
-.synonymssection a {
-    color: var(--purple);
-    font-weight: 700;
-    text-decoration: none;
-}
-
 .source {
     font-size: 0.875rem;
     display: flex;

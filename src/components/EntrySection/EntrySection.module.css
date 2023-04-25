@@ -1,0 +1,55 @@
+
+.entrysection {
+    margin: 1rem 0;
+}
+
+.entrysection h2 {
+    font-weight: 700;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.entrysection h3 {
+    color: var(--gray5);
+    font-weight: 400;
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    line-height: clamp(1.25rem, 2.5vw, 1.5rem);
+}
+
+.entrysection ul {
+    margin-bottom: 2rem;
+}
+
+.entrysection li {
+    margin-bottom: .5rem;
+}
+
+.meaningh3 {
+    margin: .75rem 0;
+}
+
+.example {
+    color: var(--gray5);
+    list-style-type: none;
+}
+
+.synonymssection {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    line-height: clamp(1.25rem, 2.5vw, 1.5rem);
+    display: flex;
+    gap: clamp(10px, 2vw, 20px);
+}
+
+.synonymsh3 {
+    margin: 0;
+}
+
+.synonymssection > * {
+    margin: 0;
+}
+
+.synonymssection a {
+    color: var(--purple);
+    font-weight: 700;
+    text-decoration: none;
+}

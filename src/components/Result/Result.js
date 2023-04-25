@@ -2,40 +2,47 @@ import React from 'react';
 import styles from './Result.module.css';
 import PlayWord from '../PlayWord/PlayWord';
 import newwindow from '../../assets/images/icon-new-window.svg'
+import EntrySection from '../EntrySection/EntrySection';
 
 
-function Result() {
+function Result({result}) {
+
+  // so really display needs to be for each meaning (there can be multiple) in each array item (there can be multiple)
+  // but, it only needs to read the word, phonetics, and audio once
+
+  // sometimes additional top-level entries contain new stuff, sometimes it repeats arrays nested in previous ones
+
+  // may have to search through phonetics array in wordInfo to find the first one that has audio for PlayWord
+  const wordInfo = result[0];
+  const allEntries = result.map(entry => entry.meanings);
+ 
+  // console.log(result);
+  console.log(wordInfo);
+  // console.log(allEntries);
+
+
   return (
     <>
       <div className={styles.wordheader}>
         <div>
-          <h1>keyboard</h1>
-          <p>pronunciation</p>
+          <h1>{wordInfo.word}</h1>
+          <p>{wordInfo.phonetic}</p>
         </div>
         <div>
           <PlayWord />
         </div>
       </div>
-      <div className={styles.partofspeechsection}>
-        <h2>noun</h2>
-          <div>
-            <h3 className={styles.meaningh3}>Meaning</h3>
-            <ul>
-              <li>(etc.) A set of keys used to operate a typewriter, computer etc.</li>
-              <li>A component of many instruments including the piano, organ, and harpsichord consisting of usually black and white keys that cause different tones to be produced when struck.</li>
-            </ul>
-          </div>
-          <div className={styles.synonymssection}>
-            <h3 classname={styles.synonymsh3}>Synonyms</h3>
-              {/* presumably meant to run a new search when clicked */}
-            <div><a href="example.com">electronic keyboard</a></div>
-          </div>
-      </div>
+
+     {allEntries.map(entry => (
+      // console.log(entry)
+      <EntrySection entry={entry} />
+     ))}
+     
       <div className={styles.source}>
         <h3>Source</h3>
         <div>
-          <a href="example.com">https://en.wiktionary.org/wiki/keyboard</a>
-          <img src={newwindow} alt=""/>
+          <a href={wordInfo.sourceUrls} target="_blank" rel="noreferrer">{wordInfo.sourceUrls}</a>
+          <img src={newwindow} alt="(opens in a new tab)"/>
         </div>
       </div>
     </>
