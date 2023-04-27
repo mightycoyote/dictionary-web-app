@@ -7,6 +7,7 @@ function PlayWord({ wordInfo }) {
   const [audioFile, setAudioFile] = React.useState("");
   const audioRef = React.useRef();
 
+  // find a phonetics entry that includes audio
   React.useEffect(() => {
     const audioSifted = wordInfo.phonetics.find((audio) => audio.audio !== "");
     setAudioFile(audioSifted !== null ? audioSifted.audio : "");

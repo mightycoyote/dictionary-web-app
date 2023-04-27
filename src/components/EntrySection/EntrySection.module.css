@@ -52,4 +52,6 @@
     color: var(--purple);
     font-weight: 700;
     text-decoration: none;
-}
+    padding: 0 10px;
+    display: inline-block;
+} 

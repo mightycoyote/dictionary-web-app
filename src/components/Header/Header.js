@@ -4,16 +4,16 @@ import logo from '../../assets/images/logo.svg'
 import FontSelect from '../FontSelect';
 import DarkModeSelect from '../DarkModeSelect';
 
-function Header() {
+function Header({font, setFont, darkmodeOn, setDarkmodeOn}) {
   return (
     <header className={styles.header}>
       <div>
         <img className={styles.logo} src={logo} alt="Dictionary Search logo"/>
       </div>
       <div className={styles.selectors}>
-        <FontSelect />
+        <FontSelect font={font} setFont={setFont} />
         <div className={styles.divider}></div>
-        <DarkModeSelect />
+        <DarkModeSelect darkmodeOn={darkmodeOn} setDarkmodeOn={setDarkmodeOn} />
       </div>
     </header>);
 }
