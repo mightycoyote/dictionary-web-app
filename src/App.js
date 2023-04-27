@@ -10,10 +10,16 @@ import placeholderData from "./placeholderData";
 function App() {
   const ENDPOINT = "https://api.dictionaryapi.dev/api/v2/entries/en/";
   const [result, setResult] = React.useState(placeholderData);
-  // change to look for local prefs
-  const [font, setFont] = React.useState('serif');
+  // looks for local prefs
+  const [font, setFont] = React.useState(() => {
+    const savedPref = localStorage.getItem('dictionaryFont');
+    return savedPref ?? 'sanserif';
+  });
   // also system prefs for this one
-  const [darkmodeOn, setDarkmodeOn] = React.useState(false);
+  const [darkmodeOn, setDarkmodeOn] = React.useState(() => {
+    const userPref = localStorage.getItem('dictionaryDarkmode') ?? window.matchMedia('(prefers-color-scheme: dark)').matches;
+    return userPref;
+  });
   const [classes, setClasses] = React.useState(`app ${font}`);
 
   async function handleSubmit(search) {
@@ -24,7 +30,10 @@ function App() {
 
   React.useEffect(() => {
     const darkmode = darkmodeOn ? "darkmode" : "";
-    setClasses(`app ${font} ${darkmode}` );
+    setClasses(`app ${font} ${darkmode}`);
+    // font is the actual font, darkmodeOn is a boolean
+    localStorage.setItem('dictionaryFont', font);
+    localStorage.setItem('dictionaryDarkmode', darkmodeOn);
   }, [font, darkmodeOn]);
 
   return (
