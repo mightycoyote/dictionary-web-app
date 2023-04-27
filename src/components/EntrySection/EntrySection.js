@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './EntrySection.module.css';
 
 function EntrySection({entry, handleSubmit}) {
-  console.log(entry);
+  // console.log(entry);
 
   return (
     <div>

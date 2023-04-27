@@ -9,12 +9,14 @@ function Result({result, handleSubmit}) {
 
   // so really display needs to be for each meaning (there can be multiple) in each array item (there can be multiple)
   // but, it only needs to read the word, phonetics, and audio once
-
-  // sometimes additional top-level entries contain new stuff, sometimes it repeats arrays nested in previous ones
-
-  // may have to search through phonetics array in wordInfo to find the first one that has audio for PlayWord
   const wordInfo = result[0];
+
   const allEntries = result.map(entry => entry.meanings);
+  // const allEntries2 = ;
+
+  // console.log(result);
+  // console.log(allEntries);
+  // console.log(allEntries2);
 
   return (
     <>
@@ -24,7 +26,7 @@ function Result({result, handleSubmit}) {
           <p>{wordInfo.phonetic}</p>
         </div>
         <div>
-          <PlayWord />
+          <PlayWord wordInfo={wordInfo} />
         </div>
       </div>
 
