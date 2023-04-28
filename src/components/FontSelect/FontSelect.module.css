@@ -1,4 +1,16 @@
 .select {
     font-size: clamp(0.875rem, 3vw, 1.125rem);
     font-weight: 700;
+    color: inherit;
+    background-color: inherit;
+    border: none;
+    /* replace CoreUI's custom caret with the one for this design */
+    background-image: url(../../assets/images/icon-arrow-down.svg);
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.select:focus {
+    border: 1px solid var(--purple);
+    box-shadow: none;
 }

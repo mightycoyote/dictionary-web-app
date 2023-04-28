@@ -2,8 +2,7 @@ import React from "react";
 import { CFormSelect } from "@coreui/react";
 import styles from "./FontSelect.module.css";
 
-function FontSelect({font, setFont}) {
-
+function FontSelect({ font, setFont }) {
   return (
     <form>
       <label htmlFor="fontselect" className="visually-hidden">
@@ -24,6 +23,5 @@ function FontSelect({font, setFont}) {
     </form>
   );
 }
-
 
 export default FontSelect;

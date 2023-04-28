@@ -12,33 +12,34 @@ mono: Inconsolata reg, bold
 
 /* comp sizes: 375px, 768px, 1440px w/ 736px content width for header, search, br, but a little extra padding on the right in the text sections */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap");
 
 .app {
-  --sanserif: 'Inter', sans-serif;
-  --serif: 'Lora', serif;
-  --mono: 'Inconsolata', monospace;
+  --sanserif: "Inter", sans-serif;
+  --serif: "Lora", serif;
+  --mono: "Inconsolata", monospace;
 
   /* font-size for the main text, which is the definition bullets here */
   font-size: clamp(0.9375rem, 3vw, 1.125rem);
 
   --gray1: #050505;
-  --gray2: #1F1F1F;
-  --gray3: #2D2D2D;
-  --gray4: #3A3A3A;
+  --gray2: #1f1f1f;
+  --gray3: #2d2d2d;
+  --gray4: #3a3a3a;
   --gray5: #757575;
   /* drawn borders are gray6 */
-  --gray6: #E9E9E9;
-  --gray7: #F4F4F4;
-  --purple: #A445ED;
-  --red: #FF5252;
+  --gray6: #e9e9e9;
+  --gray7: #f4f4f4;
+  --purple: #a445ed;
+  --red: #ff5252;
 
   background-color: white;
   color: var(--gray3);
 
   /* 1rem = 16px */
+
   /* 
   --s77: 4.8125rem;
   --s64: 4rem;
@@ -50,7 +51,6 @@ mono: Inconsolata reg, bold
   --s15: 0.9375rem;
   --s14: 0.875rem; 
   */
- 
 
   /* clamp settings for fonts */
   /* 
@@ -75,12 +75,12 @@ mono: Inconsolata reg, bold
 
 .app.darkmode {
   background-color: var(--gray1);
-  color: var(--gray5);
+  color: white;
 }
 
 .app.sanserif {
   font-family: var(--sanserif);
-} 
+}
 
 .app.serif {
   font-family: var(--serif);
@@ -88,10 +88,32 @@ mono: Inconsolata reg, bold
 
 .app.mono {
   font-family: var(--mono);
-} 
+}
 
 .wrapper {
   max-width: 46rem;
   margin: 0 auto;
   height: 100vh;
+}
+
+.form-switch .form-check-input {
+  background-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-4 -4 8 8%27%3e%3ccircle r=%273%27 fill=%27rgba%28255, 255, 255, 1%29%27/%3e%3c/svg%3e");
+}
+
+.form-switch .form-check-input:focus {
+  border-color: var(--purple);
+  box-shadow: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-4 -4 8 8%27%3e%3ccircle r=%273%27 fill=%27rgba%28255, 255, 255, 1%29%27/%3e%3c/svg%3e");
+}
+
+.form-check-input {
+  background-color: var(--gray5);
+}
+
+.form-check-input:hover {
+  background-color: var(--purple);
+}
+
+.app.darkmode .form-check-input {
+  background-color: var(--purple);
 }

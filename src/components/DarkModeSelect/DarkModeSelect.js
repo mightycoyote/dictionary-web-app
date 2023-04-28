@@ -4,20 +4,17 @@ import moon from "../../assets/images/icon-moon.svg";
 import { CFormSwitch } from "@coreui/react";
 
 function DarkModeSelect({ darkmodeOn, setDarkmodeOn }) {
-  
   return (
-    <div className={styles.switch}>
-      <form>
-        <CFormSwitch
-          label={<Moon />}
-          id="formSwitchCheckDefault"
-          checked={darkmodeOn}
-          onChange={event => {
-            setDarkmodeOn(event.target.checked);
-          }}
-        />
-      </form>
-    </div>
+    <form className={styles.darkmodeform}>
+      <CFormSwitch
+        label={<Moon />}
+        id="formSwitchCheckDefault"
+        checked={darkmodeOn}
+        onChange={(event) => {
+          setDarkmodeOn(event.target.checked);
+        }}
+      />
+    </form>
   );
 }
 

@@ -17,7 +17,7 @@ function App() {
   });
   // also system prefs for this one
   const [darkmodeOn, setDarkmodeOn] = React.useState(() => {
-    const userPref = localStorage.getItem('dictionaryDarkmode') ?? window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const userPref = JSON.parse(localStorage.getItem('dictionaryDarkmode')) ?? window.matchMedia('(prefers-color-scheme: dark)').matches;
     return userPref;
   });
   const [classes, setClasses] = React.useState(`app ${font}`);
