@@ -1,5 +1,16 @@
 .button {
     /* 48px mobile, 75px tablet (768px) and above */
     height: clamp(48px, 11vw, 75px);
+    border: none;
+    border-radius: 50%;
+    padding: 0;
+}
+
+.svg:hover {
     fill: white;
+}
+
+.svg circle:hover {
+    fill: var(--purple);
+    opacity: 100%;
 }
