@@ -1,15 +1,36 @@
+.inputwrapper {
+  width: 100%;
+  margin: 1.5rem 0 0 0;
+  font-weight: 700;
+  height: clamp(3rem, 8.5vw, 4rem);
+  font-size: clamp(1rem, 3vw, 1.25rem);
+  border-radius: 15px;
+  display: flex;
+  padding-left: 20px;
+  padding-right: 20px;
+  align-items: center;
+  background-color: var(--gray7);
+}
+
+.inputwrapper:focus {
+  border: 1px solid var(--purple);
+}
+
+/* .inputwrapper.error {
+    border-color: red;
+} */
+
 .input {
-    width: 100%;
-    height: 3rem;
-    margin: 1.5rem 0 0 0;
+  border: none;
+  padding: 0;
+  background-color: inherit;
+}
+
+.input::placeholder {
+    font-weight: 700;
 }
 
 .input:focus {
-    border-color: var(--purple);
-    box-shadow: none;
-}
-
-.emptyerror {
-    color: var(--red);
-    position: absolute;
+  box-shadow: none;
+  background-color: inherit;
 }

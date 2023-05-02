@@ -1,5 +1,5 @@
 .wordheader {
-    margin-top: 1.5rem;
+    margin-top: clamp(1.5rem, 9vw, 3rem);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -12,7 +12,6 @@
 
 .wordheader p {
     color: var(--purple);
-    /* body M up to heading M  */
     font-size: clamp(1.125rem, 3vw, 1.5rem);
     line-height: clamp(1.5rem, 4vw, 1.8125rem);
 }

@@ -4,12 +4,6 @@ serif: Lora reg, bold, bolditalic
 mono: Inconsolata reg, bold
 */
 
-/* theme selections: light & dark */
-
-/* font sizes: 24, 20, 18, 14 */
-
-/* line heights: 29, 24, 17 */
-
 /* comp sizes: 375px, 768px, 1440px w/ 736px content width for header, search, br, but a little extra padding on the right in the text sections */
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
@@ -55,7 +49,8 @@ mono: Inconsolata reg, bold
   /* clamp settings for fonts */
   /* 
   --c14-to-18: clamp(0.875rem, 3vw, 1.125rem);
-  --c15-to-18: clamp(0.9375rem, 3vw, 1.125rem); 
+  --c15-to-18: clamp(0.9375rem, 3vw, 1.125rem);
+  --c16-to-20: clamp(1rem, 3vw, 1.25rem);
   --c18-to-24: clamp(1.125rem, 3vw, 1.5rem);
   --c32-to-64: clamp(2rem, 11vw, 4rem);
   */
@@ -65,6 +60,11 @@ mono: Inconsolata reg, bold
   --c20-to-24: clamp(1.25rem, 2.5vw, 1.5rem);
   --c24-to-29: clamp(1.5rem, 4vw, 1.8125rem);
   */
+
+  /* for search box */
+  /* 
+  --c48-to-64: clamp(3rem, 8.5vw, 4rem);
+   */
 
   /* top padding should go up to 58px, side 32px */
   padding-top: clamp(1.5rem, 5vmax, 3.625rem);
@@ -96,6 +96,14 @@ mono: Inconsolata reg, bold
   height: 100vh;
 }
 
+.hidden {
+  display: none;
+}
+
+.form-text {
+  color: var(--red);
+}
+
 .form-switch .form-check-input {
   background-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-4 -4 8 8%27%3e%3ccircle r=%273%27 fill=%27rgba%28255, 255, 255, 1%29%27/%3e%3c/svg%3e");
 }
@@ -116,4 +124,9 @@ mono: Inconsolata reg, bold
 
 .app.darkmode .form-check-input {
   background-color: var(--purple);
+}
+
+
+.app.darkmode .inputwrapper {
+  background-color: var(--gray2);
 }
