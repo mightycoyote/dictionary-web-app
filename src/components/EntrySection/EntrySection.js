@@ -6,7 +6,7 @@ function EntrySection({ entry, handleSubmit }) {
     <>
       {entry.map((part) => (
         <div className={styles.entrysection} key={crypto.randomUUID()}>
-          <h2>{part.partOfSpeech}</h2>
+          <h2><span>{part.partOfSpeech}</span></h2>
           <div>
             <h3 className={styles.meaningh3}>Meaning</h3>
             {/* if there is an example used in a sentence, it's grouped at the level of each individual definition (bullet), goes with the individual definition */}

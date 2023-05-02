@@ -3,10 +3,29 @@
     margin: 1rem 0;
 }
 
+/* line after h2 using pseudoelement borrowed from
+https://codepen.io/danrigsby/pen/waOOvw */
+
 .entrysection h2 {
     font-weight: 700;
     font-style: italic;
     margin-bottom: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.entrysection h2 span {
+    display: block;
+    position: relative;
+}
+
+.entrysection h2 span::after {
+    content: '';
+    position: absolute;
+    border-top: 1px solid var(--gray6);
+    width: 100%;
+    top: 50%;
+    margin-left: 20px;
 }
 
 .entrysection h3 {
@@ -22,6 +41,10 @@
 
 .entrysection li {
     margin-bottom: .5rem;
+}
+
+.entrysection li::marker {
+    color: var(--purple);
 }
 
 .meaningh3 {
