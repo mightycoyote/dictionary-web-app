@@ -3,7 +3,7 @@ import styles from "./EntrySection.module.css";
 
 function EntrySection({ entry, handleSubmit }) {
   return (
-    <div>
+    <>
       {entry.map((part) => (
         <div className={styles.entrysection} key={crypto.randomUUID()}>
           <h2>{part.partOfSpeech}</h2>
@@ -64,7 +64,7 @@ function EntrySection({ entry, handleSubmit }) {
 
         </div>
       ))}
-    </div>
+    </>
   );
 }
 
