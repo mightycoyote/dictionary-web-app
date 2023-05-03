@@ -1,6 +1,6 @@
 import React from "react";
-import "@coreui/coreui/dist/css/coreui.min.css";
-import "./App.css";
+// import "@coreui/coreui/dist/css/coreui.min.css";
+import "./App.scss";
 import Header from "./components/Header";
 import Search from "./components/Search";
 import Result from "./components/Result";

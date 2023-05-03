@@ -1,3 +1,9 @@
+@import "../node_modules/@coreui/coreui/scss/coreui";
+
+// custom variables
+@import "./shared.scss";
+
+
 /* font selections
 sanserif: Inter reg, bold
 serif: Lora reg, bold, bolditalic
@@ -17,20 +23,6 @@ mono: Inconsolata reg, bold
 
   /* font-size for the main text, which is the definition bullets here */
   font-size: clamp(0.9375rem, 3vw, 1.125rem);
-
-  --gray1: #050505;
-  --gray2: #1f1f1f;
-  --gray3: #2d2d2d;
-  --gray4: #3a3a3a;
-  --gray5: #757575;
-  /* drawn borders are gray6 */
-  --gray6: #e9e9e9;
-  --gray7: #f4f4f4;
-  --purple: #a445ed;
-  --red: #ff5252;
-
-  background-color: white;
-  color: var(--gray3);
 
   /* 1rem = 16px */
 
@@ -74,7 +66,7 @@ mono: Inconsolata reg, bold
 }
 
 .app.darkmode {
-  background-color: var(--gray1);
+  background-color: $gray1;
   color: white;
 }
 
@@ -101,7 +93,7 @@ mono: Inconsolata reg, bold
 }
 
 .form-text {
-  color: var(--red);
+  color: $red;
 }
 
 .form-switch .form-check-input {
@@ -109,24 +101,23 @@ mono: Inconsolata reg, bold
 }
 
 .form-switch .form-check-input:focus {
-  border-color: var(--purple);
+  border-color: $purple;
   box-shadow: none;
   background-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-4 -4 8 8%27%3e%3ccircle r=%273%27 fill=%27rgba%28255, 255, 255, 1%29%27/%3e%3c/svg%3e");
 }
 
 .form-check-input {
-  background-color: var(--gray5);
+  background-color: $gray5;
 }
 
 .form-check-input:hover {
-  background-color: var(--purple);
+  background-color: $purple;
 }
 
 .app.darkmode .form-check-input {
-  background-color: var(--purple);
+  background-color: $purple;
 }
 
-
 .app.darkmode .inputwrapper {
-  background-color: var(--gray2);
+  background-color: $gray2;
 }

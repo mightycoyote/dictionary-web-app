@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Result.module.css';
+import styles from './Result.module.scss';
 import PlayWord from '../PlayWord/PlayWord';
 import newwindow from '../../assets/images/icon-new-window.svg'
 import EntrySection from '../EntrySection/EntrySection';

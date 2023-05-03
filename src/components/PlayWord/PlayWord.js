@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./PlayWord.module.css";
+import styles from "./PlayWord.module.scss";
 // import playIcon from "../../assets/images/icon-play.svg";
 
 function PlayWord({ wordInfo }) {

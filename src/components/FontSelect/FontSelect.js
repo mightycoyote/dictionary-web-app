@@ -1,6 +1,6 @@
 import React from "react";
 import { CFormSelect } from "@coreui/react";
-import styles from "./FontSelect.module.css";
+import styles from "./FontSelect.module.scss";
 
 function FontSelect({ font, setFont }) {
   return (

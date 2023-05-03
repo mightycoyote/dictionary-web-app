@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./DarkModeSelect.module.css";
+import styles from "./DarkModeSelect.module.scss";
 import moon from "../../assets/images/icon-moon.svg";
 import { CFormSwitch } from "@coreui/react";
 

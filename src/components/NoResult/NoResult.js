@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './NoResult.module.css';
+import styles from './NoResult.module.scss';
 
 function NoResult({result}) {
   return (

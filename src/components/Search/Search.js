@@ -1,6 +1,6 @@
 import React from "react";
 import { CForm, CFormLabel, CFormInput, CFormText } from "@coreui/react";
-import styles from "./Search.module.css";
+import styles from "./Search.module.scss";
 
 function Search({ handleSubmit }) {
   const [search, setSearch] = React.useState("");

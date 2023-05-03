@@ -1,3 +1,4 @@
+@import '../../shared.scss';
 
 /* this element (toggle plus icon together) is 20px high at all screen sizes */
 
@@ -9,5 +10,5 @@
 }
 
 .darkmodeform:hover {
-    color: purple;
+    color: $purple;
 }

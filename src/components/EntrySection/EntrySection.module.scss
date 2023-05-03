@@ -1,3 +1,4 @@
+@import '../../shared.scss';
 
 .entrysection {
     margin: 1rem 0;
@@ -22,7 +23,7 @@ https://codepen.io/danrigsby/pen/waOOvw */
 .entrysection h2 span::after {
     content: '';
     position: absolute;
-    border-top: 1px solid var(--gray6);
+    border-top: 1px solid $gray6;
     width: 100%;
     top: 50%;
     margin-left: 20px;
@@ -44,7 +45,7 @@ https://codepen.io/danrigsby/pen/waOOvw */
 }
 
 .entrysection li::marker {
-    color: var(--purple);
+    color: $purple;
 }
 
 .meaningh3 {
@@ -52,7 +53,7 @@ https://codepen.io/danrigsby/pen/waOOvw */
 }
 
 .example {
-    color: var(--gray5);
+    color: $gray5;
     list-style-type: none;
 }
 
@@ -72,7 +73,7 @@ https://codepen.io/danrigsby/pen/waOOvw */
 }
 
 .synonymssection span {
-    color: var(--purple);
+    color: $purple;
     font-weight: 700;
     text-decoration: none;
     padding: 0 10px;

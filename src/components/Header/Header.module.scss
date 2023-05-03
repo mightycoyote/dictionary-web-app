@@ -1,3 +1,5 @@
+@import '../../shared.scss';
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -16,7 +18,7 @@
 
 .divider {
     width: 1px;
-    background-color: var(--gray6);
+    background-color: $gray6;
     margin-top: 0px;
     margin-bottom: 0px; 
     margin-left: max(10px, 1vw);
