@@ -1,62 +1,19 @@
+// coreui stylesheets
 @import "../node_modules/@coreui/coreui/scss/coreui";
 
-// custom variables
-@import "./shared.scss";
-
-
-/* font selections
-sanserif: Inter reg, bold
-serif: Lora reg, bold, bolditalic
-mono: Inconsolata reg, bold
-*/
-
-/* comp sizes: 375px, 768px, 1440px w/ 736px content width for header, search, br, but a little extra padding on the right in the text sections */
-
+// fonts
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap");
 
+// custom variables
+@import "./shared.scss";
+
+/* comp sizes: 375px, 768px, 1440px w/ 736px content width */
+
 .app {
-  --sanserif: "Inter", sans-serif;
-  --serif: "Lora", serif;
-  --mono: "Inconsolata", monospace;
-
-  /* font-size for the main text, which is the definition bullets here */
-  font-size: clamp(0.9375rem, 3vw, 1.125rem);
-
-  /* 1rem = 16px */
-
-  /* 
-  --s77: 4.8125rem;
-  --s64: 4rem;
-  --s29: 1.8125rem;
-  --s24: 1.5rem;
-  --s20: 1.25rem;
-  --s18: 1.125rem;
-  --s17: 1.0625rem;
-  --s15: 0.9375rem;
-  --s14: 0.875rem; 
-  */
-
-  /* clamp settings for fonts */
-  /* 
-  --c14-to-18: clamp(0.875rem, 3vw, 1.125rem);
-  --c15-to-18: clamp(0.9375rem, 3vw, 1.125rem);
-  --c16-to-20: clamp(1rem, 3vw, 1.25rem);
-  --c18-to-24: clamp(1.125rem, 3vw, 1.5rem);
-  --c32-to-64: clamp(2rem, 11vw, 4rem);
-  */
-
-  /* for line heights */
-  /* 
-  --c20-to-24: clamp(1.25rem, 2.5vw, 1.5rem);
-  --c24-to-29: clamp(1.5rem, 4vw, 1.8125rem);
-  */
-
-  /* for search box */
-  /* 
-  --c48-to-64: clamp(3rem, 8.5vw, 4rem);
-   */
+  /* font-size for the main text (definition bullets) */
+  font-size: $c15-to-18;
 
   /* top padding should go up to 58px, side 32px */
   padding-top: clamp(1.5rem, 5vmax, 3.625rem);
@@ -68,18 +25,22 @@ mono: Inconsolata reg, bold
 .app.darkmode {
   background-color: $gray1;
   color: white;
+
+  .inputwrapper {
+    background-color: $gray2;
+  }
 }
 
 .app.sanserif {
-  font-family: var(--sanserif);
+  font-family: $sanserif;
 }
 
 .app.serif {
-  font-family: var(--serif);
+  font-family: $serif;
 }
 
 .app.mono {
-  font-family: var(--mono);
+  font-family: $mono;
 }
 
 .wrapper {
@@ -116,8 +77,4 @@ mono: Inconsolata reg, bold
 
 .app.darkmode .form-check-input {
   background-color: $purple;
-}
-
-.app.darkmode .inputwrapper {
-  background-color: $gray2;
 }

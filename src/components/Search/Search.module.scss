@@ -4,35 +4,37 @@
   width: 100%;
   margin: 1.5rem 0 0 0;
   font-weight: 700;
-  height: clamp(3rem, 8.5vw, 4rem);
-  font-size: clamp(1rem, 3vw, 1.25rem);
+  height: $c48-to-64;
+  font-size: $c16-to-20;
   border-radius: 15px;
   display: flex;
   padding-left: 20px;
   padding-right: 20px;
   align-items: center;
   background-color: $gray7;
+
+  &:focus {
+    border: 1px solid $purple;
+  } 
+
+  .input {
+    border: none;
+    padding: 0;
+    background-color: inherit;
+
+    &:focus {
+      box-shadow: none;
+      background-color: inherit;
+    }
+
+    &:placeholder {
+      font-weight: 700;
+    }
+  }
+  
 }
 
-.inputwrapper:focus {
-  border: 1px solid $purple;
-}
 
 /* .inputwrapper.error {
     border-color: red;
 } */
-
-.input {
-  border: none;
-  padding: 0;
-  background-color: inherit;
-}
-
-.input::placeholder {
-    font-weight: 700;
-}
-
-.input:focus {
-  box-shadow: none;
-  background-color: inherit;
-}

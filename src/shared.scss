@@ -3,7 +3,6 @@ $gray2: #1f1f1f;
 $gray3: #2d2d2d;
 $gray4: #3a3a3a;
 $gray5: #757575;
-/* drawn borders are gray6 */
 $gray6: #e9e9e9;
 $gray7: #f4f4f4;
 $purple: #a445ed;
@@ -11,3 +10,34 @@ $red: #ff5252;
 
 $body-bg: white;
 $body-color: $gray3;
+
+$sanserif: "Inter", sans-serif;
+$serif: "Lora", serif;
+$mono: "Inconsolata", monospace;
+
+$s77: 4.8125rem;
+$s64: 4rem;
+$s29: 1.8125rem;
+$s24: 1.5rem;
+$s20: 1.25rem;
+$s18: 1.125rem;
+$s17: 1.0625rem;
+$s15: 0.9375rem;
+$s14: 0.875rem; 
+
+// default font size
+$c15-to-18: clamp($s15, 3vw, $s18);
+
+// fonts
+$c14-to-18: clamp($s14, 3vw, $s18);
+$c15-to-18: clamp($s15, 3vw, $s18);
+$c16-to-20: clamp(1rem, 3vw, $s20);
+$c18-to-24: clamp($s18, 3vw, $s24);
+$c32-to-64: clamp(2rem, 11vw, 4rem);
+
+// line-heights
+$c20-to-24: clamp($s20, 2.5vw, $s24);
+$c24-to-29: clamp($s24, 4vw, $s29);
+
+// search box height
+$c48-to-64: clamp(3rem, 8.5vw, 4rem);
