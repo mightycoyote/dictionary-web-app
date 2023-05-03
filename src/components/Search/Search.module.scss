@@ -1,40 +1,38 @@
 @import '../../shared.scss';
 
 .inputwrapper {
-  width: 100%;
+  display: flex;
   margin: 1.5rem 0 0 0;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.input {
+  width: 100%;
   font-weight: 700;
   height: $c48-to-64;
   font-size: $c16-to-20;
   border-radius: 15px;
-  display: flex;
   padding-left: 20px;
   padding-right: 20px;
-  align-items: center;
   background-color: $gray7;
+
+  &:invalid {
+    border-color: $red;
+  }
 
   &:focus {
     border: 1px solid $purple;
+    box-shadow: none;
+    background-color: $gray7;
   } 
-
-  .input {
-    border: none;
-    padding: 0;
-    background-color: inherit;
-
-    &:focus {
-      box-shadow: none;
-      background-color: inherit;
-    }
-
-    &:placeholder {
-      font-weight: 700;
-    }
-  }
-  
 }
 
+.button {
+  position: absolute;
+  margin-right: 14px;
+  border: none;
+  background-color: inherit;
+  padding: 0 6px;
+}
 
-/* .inputwrapper.error {
-    border-color: red;
-} */
