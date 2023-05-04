@@ -5,18 +5,27 @@
 .darkmodeform {
     display: flex;
     flex-direction: row;
-    height: 1.25rem;
+    height: $s20;
     gap: 10px;
     cursor: pointer;
+
+    * {
+        cursor: inherit;
+    }
+
+    // *:hover {
+    //     stroke: $purple;
+    // }
 }
 
-.darkmodeform:hover {
-    color: $purple;
+.svg {
+    height: $s20;
+    width: $s20;
+
+    &:hover {
+        stroke: $purple;
+    }
 }
 
-// need to listen for clicks on outer element
 
-// need to get cursor: pointer on each element when this is fixed
-.switch {
-    cursor: pointer;
-}
+
