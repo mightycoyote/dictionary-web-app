@@ -7,8 +7,16 @@
     flex-direction: row;
     height: 1.25rem;
     gap: 10px;
+    cursor: pointer;
 }
 
 .darkmodeform:hover {
     color: $purple;
+}
+
+// need to listen for clicks on outer element
+
+// need to get cursor: pointer on each element when this is fixed
+.switch {
+    cursor: pointer;
 }

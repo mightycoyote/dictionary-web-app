@@ -32,8 +32,8 @@ https://codepen.io/danrigsby/pen/waOOvw */
 .entrysection h3 {
     color: var(--gray5);
     font-weight: 400;
-    font-size: clamp(1rem, 2.5vw, 1.25rem);
-    line-height: clamp(1.25rem, 2.5vw, 1.5rem);
+    font-size: $c16-to-20;
+    line-height: $c20-to-24;
 }
 
 .entrysection ul {
@@ -58,8 +58,8 @@ https://codepen.io/danrigsby/pen/waOOvw */
 }
 
 .synonymssection {
-    font-size: clamp(1rem, 2.5vw, 1.25rem);
-    line-height: clamp(1.25rem, 2.5vw, 1.5rem);
+    font-size: $c16-to-20;
+    line-height: $c20-to-24;
     display: flex;
     gap: clamp(10px, 2vw, 20px);
 }
@@ -78,4 +78,5 @@ https://codepen.io/danrigsby/pen/waOOvw */
     text-decoration: none;
     padding: 0 10px;
     display: inline-block;
+    cursor: pointer;
 } 

@@ -21,7 +21,7 @@ function Search({ handleSubmit }) {
       <CFormLabel htmlFor="search-box" className="visually-hidden">
         Search the dictionary
       </CFormLabel>
-      <div className={styles.inputwrapper}>
+      <div className={styles.inputwrapper} id="inputwrapper">
         <CFormInput
           id="search-box"
           placeholder="Search for any word..."

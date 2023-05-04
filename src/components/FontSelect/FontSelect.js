@@ -16,9 +16,9 @@ function FontSelect({ font, setFont }) {
         }}
         className={styles.select}
       >
-        <option value="sanserif">Sans Serif</option>
-        <option value="serif">Serif</option>
-        <option value="mono">Mono</option>
+        <option className={styles.sanserif} value="sanserif">Sans Serif</option>
+        <option className={styles.serif} value="serif">Serif</option>
+        <option className={styles.mono} value="mono">Mono</option>
       </CFormSelect>
     </form>
   );

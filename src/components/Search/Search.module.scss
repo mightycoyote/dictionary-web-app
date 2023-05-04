@@ -16,7 +16,10 @@
   padding-left: 20px;
   padding-right: 20px;
   background-color: $gray7;
-
+  caret-color: $purple;
+  cursor: pointer;
+  color: inherit;
+  
   &:invalid {
     border-color: $red;
   }
@@ -25,6 +28,7 @@
     border: 1px solid $purple;
     box-shadow: none;
     background-color: $gray7;
+    color: inherit;
   } 
 }
 

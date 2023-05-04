@@ -13,6 +13,7 @@ function DarkModeSelect({ darkmodeOn, setDarkmodeOn }) {
         onChange={(event) => {
           setDarkmodeOn(event.target.checked);
         }}
+        className={styles.switch}
       />
     </form>
   );

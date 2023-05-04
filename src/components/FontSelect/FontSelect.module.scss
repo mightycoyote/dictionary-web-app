@@ -1,7 +1,7 @@
 @import '../../shared.scss';
 
 .select {
-    font-size: clamp(0.875rem, 3vw, 1.125rem);
+    font-size: $c14-to-18;
     font-weight: 700;
     color: inherit;
     background-color: inherit;
@@ -10,9 +10,22 @@
     background-image: url(../../assets/images/icon-arrow-down.svg);
     padding-top: 0;
     padding-bottom: 0;
+    cursor: pointer;
 }
 
 .select:focus {
     border: 1px solid $purple;
     box-shadow: none;
+}
+
+.sanserif {
+    font-family: $sanserif;
+}
+
+.serif {
+    font-family: $serif;
+}
+
+.mono {
+    font-family: $mono;
 }
