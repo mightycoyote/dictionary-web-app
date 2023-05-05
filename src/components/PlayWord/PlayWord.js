@@ -1,6 +1,5 @@
 import React from "react";
-import styles from "./PlayWord.module.scss";
-// import playIcon from "../../assets/images/icon-play.svg";
+// import styles from "./PlayWord.module.scss";
 
 function PlayWord({ wordInfo }) {
   // URL or null
@@ -19,7 +18,7 @@ function PlayWord({ wordInfo }) {
         <>
           <audio src={audioFile} ref={audioRef} />
           <button
-            className={styles.button}
+            className="playbutton"
             onClick={() => audioRef.current.play()}
           >
             <svg
@@ -31,9 +30,9 @@ function PlayWord({ wordInfo }) {
               aria-labelledby="title"
             >
               <title id="title">Play pronuncation (when available)</title>
-              <g className={styles.svg} fill="#A445ED" fillRule="evenodd">
+              <g className="playsvg" fill="#A445ED" fillRule="evenodd">
                 <circle
-                  className={styles.circle}
+                  className="circle"
                   cx="37.5"
                   cy="37.5"
                   r="37.5"

@@ -1,12 +1,11 @@
 import React from "react";
-import styles from "./DarkModeSelect.module.scss";
 import { CFormSwitch } from "@coreui/react";
 
 function DarkModeSelect({ darkmodeOn, setDarkmodeOn }) {
   return (
-    <form 
+    <form  
       onClick={() => setDarkmodeOn(!darkmodeOn)}
-      className={styles.darkmodeform}
+      className="darkmodeform"
     >
       <CFormSwitch
         // label="Toggle Darkmode"
@@ -15,9 +14,9 @@ function DarkModeSelect({ darkmodeOn, setDarkmodeOn }) {
         onChange={(event) => {
           setDarkmodeOn(event.target.checked);
         }}
-        className={styles.switch}
+        className="switch"
       />
-      <div>
+      <div className="moondiv"> 
         <svg
         // put in accessibility stuff
           id="svg"
@@ -25,10 +24,9 @@ function DarkModeSelect({ darkmodeOn, setDarkmodeOn }) {
           width="22"
           height="22"
           viewBox="0 0 22 22"
-          className={styles.svg}
+          className="moonsvg"
         >
           <path
-            className={styles.svg}
             fill="none"
             stroke="#838383"
             stroke-linecap="round"
@@ -40,6 +38,6 @@ function DarkModeSelect({ darkmodeOn, setDarkmodeOn }) {
       </div>
     </form>
   );
-}
+} 
 
 export default DarkModeSelect;

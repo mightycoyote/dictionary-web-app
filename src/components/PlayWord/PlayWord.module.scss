@@ -1,6 +1,6 @@
-@import '../../shared.scss';
+// @import '../../shared.scss';
 
-.button {
+.playbutton {
     /* 48px mobile, 75px tablet (768px) and above */
     height: clamp(48px, 11vw, 75px);
     border: none;
@@ -8,11 +8,11 @@
     padding: 0;
 }
 
-.svg:hover {
+.playsvg:hover {
     fill: white;
 }
 
-.svg circle:hover {
+.playsvg circle:hover {
     fill: $purple;
     opacity: 100%;
 }

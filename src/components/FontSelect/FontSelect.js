@@ -1,6 +1,5 @@
 import React from "react";
 import { CFormSelect } from "@coreui/react";
-import styles from "./FontSelect.module.scss";
 
 function FontSelect({ font, setFont }) {
   return (
@@ -14,11 +13,11 @@ function FontSelect({ font, setFont }) {
         onChange={(event) => {
           setFont(event.target.value);
         }}
-        className={styles.select}
+        className="fontselect"
       >
-        <option className={styles.sanserif} value="sanserif">Sans Serif</option>
-        <option className={styles.serif} value="serif">Serif</option>
-        <option className={styles.mono} value="mono">Mono</option>
+        <option className="sanserif" value="sanserif">Sans Serif</option>
+        <option className="serif" value="serif">Serif</option>
+        <option className="mono" value="mono">Mono</option>
       </CFormSelect>
     </form>
   );

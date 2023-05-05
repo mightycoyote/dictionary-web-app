@@ -1,3 +1,11 @@
+// coreui stylesheets
+@import "../node_modules/@coreui/coreui/scss/coreui";
+
+// fonts
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap");
+
 $gray1: #050505;
 $gray2: #1f1f1f;
 $gray3: #2d2d2d;

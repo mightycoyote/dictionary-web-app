@@ -1,21 +1,20 @@
 import React from "react";
-import styles from "./EntrySection.module.scss";
 
 function EntrySection({ entry, handleSubmit }) {
   return (
     <>
       {entry.map((part) => (
-        <div className={styles.entrysection} key={crypto.randomUUID()}>
+        <div className="entrysection" key={crypto.randomUUID()}>
           <h2><span>{part.partOfSpeech}</span></h2>
           <div>
-            <h3 className={styles.meaningh3}>Meaning</h3>
+            <h3 className="meaningh3">Meaning</h3>
             {/* if there is an example used in a sentence, it's grouped at the level of each individual definition (bullet), goes with the individual definition */}
             <ul>
               {part.definitions?.map((definition) => (
                 <>
                   <li key={crypto.randomUUID()}>{definition.definition}</li>
                   {definition.example && (
-                    <li key={crypto.randomUUID()} className={styles.example}>
+                    <li key={crypto.randomUUID()} className="example">
                       "{definition.example}"
                     </li>
                   )}
@@ -25,8 +24,8 @@ function EntrySection({ entry, handleSubmit }) {
           </div>
 
           {part.synonyms.length > 0 && (
-            <div className={styles.synonymssection}>
-              <h3 className={styles.synonymsh3}>Synonyms</h3>
+            <div className="synonymssection">
+              <h3 className="synonymsh3">Synonyms</h3>
               <div>
                 {part.synonyms?.map((synonym) => (
                   <span
@@ -44,8 +43,8 @@ function EntrySection({ entry, handleSubmit }) {
           )}
 
           {part.antonyms.length > 0 && (
-            <div className={styles.synonymssection}>
-              <h3 className={styles.synonymsh3}>Antonyms</h3>
+            <div className="synonymssection">
+              <h3 className="synonymsh3">Antonyms</h3>
               <div>
                 {part.antonyms?.map((antonym) => (
                   <span

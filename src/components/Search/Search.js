@@ -1,6 +1,5 @@
 import React from "react";
 import { CForm, CFormLabel, CFormInput, CFormText } from "@coreui/react";
-import styles from "./Search.module.scss";
 
 function Search({ handleSubmit }) {
   const [search, setSearch] = React.useState("");
@@ -21,11 +20,11 @@ function Search({ handleSubmit }) {
       <CFormLabel htmlFor="search-box" className="visually-hidden">
         Search the dictionary
       </CFormLabel>
-      <div className={styles.inputwrapper} id="inputwrapper">
+      <div className="inputwrapper" id="inputwrapper">
         <CFormInput
           id="search-box"
           placeholder="Search for any word..."
-          className={styles.input}
+          className="input"
           aria-describedby="empty-help"
           value={search}
           onChange={(event) => {
@@ -34,7 +33,7 @@ function Search({ handleSubmit }) {
         >
           
         </CFormInput>
-        <button className={styles.button}>
+        <button className="searchbutton">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="18"

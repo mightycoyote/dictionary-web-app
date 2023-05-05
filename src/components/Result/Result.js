@@ -1,7 +1,5 @@
 import React from 'react';
-import styles from './Result.module.scss';
 import PlayWord from '../PlayWord/PlayWord';
-import newwindow from '../../assets/images/icon-new-window.svg'
 import EntrySection from '../EntrySection/EntrySection';
 
 
@@ -20,7 +18,7 @@ function Result({result, handleSubmit}) {
 
   return (
     <>
-      <div className={styles.wordheader}>
+      <div className="wordheader">
         <div>
           <h1>{wordInfo.word}</h1>
           <p>{wordInfo.phonetic}</p>
@@ -34,11 +32,12 @@ function Result({result, handleSubmit}) {
       <EntrySection entry={entry} handleSubmit={handleSubmit} key={crypto.randomUUID()}/>
      ))}
      
-      <div className={styles.source}>
+      <div className="source">
         <h3>Source</h3>
         <div>
           <a href={wordInfo.sourceUrls} target="_blank" rel="noreferrer">{wordInfo.sourceUrls}</a>
-          <img src={newwindow} alt="(opens in a new tab)"/>
+          {/* add accessibility stuff: "opens in new window" */}
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"><path fill="none" stroke="#838383" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6.09 3.545H2.456A1.455 1.455 0 0 0 1 5v6.545A1.455 1.455 0 0 0 2.455 13H9a1.455 1.455 0 0 0 1.455-1.455V7.91m-5.091.727 7.272-7.272m0 0H9m3.636 0V5"/></svg>
         </div>
       </div>
     </>
