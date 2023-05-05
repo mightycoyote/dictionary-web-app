@@ -13,11 +13,10 @@ function FontSelect({ font, setFont }) {
         onChange={(event) => {
           setFont(event.target.value);
         }}
-        className="fontselect"
       >
-        <option className="sanserif" value="sanserif">Sans Serif</option>
-        <option className="serif" value="serif">Serif</option>
-        <option className="mono" value="mono">Mono</option>
+        <option value="sanserif">Sans Serif</option>
+        <option value="serif">Serif</option>
+        <option value="mono">Mono</option>
       </CFormSelect>
     </form>
   );

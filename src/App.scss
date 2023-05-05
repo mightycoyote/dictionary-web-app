@@ -46,16 +46,12 @@
 
 // header
 
-.header {
+header {
   display: flex;
   justify-content: space-between;
   /* should be 32px to 36.5px tall */
   height: clamp(2rem, 1vw, 2.25rem);
   align-items: center;
-}
-
-.logo {
-  height: 100%;
 }
 
 .selectors {
@@ -73,7 +69,9 @@
 
 // font select
 
-.fontselect {
+// this element must be replaced altogether to customize further
+
+#fontselect {
   font-size: $c14-to-18;
   font-weight: 700;
   color: inherit;
@@ -84,32 +82,21 @@
   padding-top: 0;
   padding-bottom: 0;
   cursor: pointer;
-}
 
-.select:focus {
-  border: 1px solid $purple;
-  box-shadow: none;
-}
-
-.sanserif {
-  font-family: $sanserif;
-}
-
-.serif {
-  font-family: $serif;
-}
-
-.mono {
-  font-family: $mono;
+  &:focus {
+    border: 1px solid $purple;
+    box-shadow: none;
+    outline: none;
+  }
 }
 
 // darkmode select
-
 /* this element (toggle plus icon together) is 20px high at all screen sizes */
 
 .darkmodeform {
   display: flex;
   flex-direction: row;
+  align-items: center;
   height: $s20;
   gap: 10px;
   cursor: pointer;
@@ -118,24 +105,42 @@
       cursor: inherit;
   }
 
+  svg {
+    height: $s20;
+    width: $s20;
+  }
+
   &:hover {
-    .moondiv svg path {
+    svg path {
       stroke: $purple;
     }
-    .form-check .form-check-input {
+    .form-check-input {
       background-color: $purple;
     }
-
   }
 }
 
-.moonsvg {
-  height: $s20;
-  width: $s20;
+// these are CoreUI classes used for the CSS switch element
+.form-switch .form-check-input {
+  background-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-4 -4 8 8%27%3e%3ccircle r=%273%27 fill=%27rgba%28255, 255, 255, 1%29%27/%3e%3c/svg%3e");
+
+  &:focus {
+    border-color: $purple;
+    box-shadow: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-4 -4 8 8%27%3e%3ccircle r=%273%27 fill=%27rgba%28255, 255, 255, 1%29%27/%3e%3c/svg%3e");
+    }
 }
 
-#svg:hover {
-  stroke: $purple;
+.form-check-input {
+  background-color: $gray5;
+
+  &:hover {
+      background-color: $purple;
+    }
+  }
+
+.app.darkmode .form-check-input {
+  background-color: $purple;
 }
 
 // search
@@ -159,10 +164,6 @@
   caret-color: $purple;
   cursor: pointer;
   color: inherit;
-  
-  &:invalid {
-    border-color: $red;
-  }
 
   &:focus {
     border: 1px solid $purple;
@@ -178,6 +179,17 @@
   border: none;
   background-color: inherit;
   padding: 0 6px;
+}
+
+.empty {
+  border-color: $red;
+    &:focus {
+      border-color: $red;
+    }
+}
+
+.empty-help {
+  color: $red;
 }
 
 // result
@@ -346,32 +358,4 @@ https://codepen.io/danrigsby/pen/waOOvw */
   margin-bottom: 2rem;
 }
 
-#empty-help {
-  color: $red;
-}
 
-
-// styling for CoreUI classes
-
-// darkmode switch
-.form-switch .form-check-input {
-  background-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-4 -4 8 8%27%3e%3ccircle r=%273%27 fill=%27rgba%28255, 255, 255, 1%29%27/%3e%3c/svg%3e");
-
-  &:focus {
-    border-color: $purple;
-    box-shadow: none;
-    background-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-4 -4 8 8%27%3e%3ccircle r=%273%27 fill=%27rgba%28255, 255, 255, 1%29%27/%3e%3c/svg%3e");
-    }
-}
-
-.form-check-input {
-  background-color: $gray5;
-
-  &:hover {
-      background-color: $purple;
-    }
-  }
-
-.app.darkmode .form-check-input {
-  background-color: $purple;
-}

@@ -3,16 +3,19 @@ import { CForm, CFormLabel, CFormInput, CFormText } from "@coreui/react";
 
 function Search({ handleSubmit }) {
   const [search, setSearch] = React.useState("");
-  const [emptyWarnClasses, setEmptyWarnClasses] = React.useState("hidden");
+  const [submitEmpty, setSubmitEmpty] = React.useState(false);
+  const [inputClasses, setInputClasses] = React.useState('input');
 
   return (
     <CForm
       onSubmit={(event) => {
         event.preventDefault();
         if (!search) {
-          setEmptyWarnClasses("");
+          setSubmitEmpty(true);
+          setInputClasses('input empty');
         } else {
-          setEmptyWarnClasses("hidden");
+          // setSubmitEmpty(false);
+          // setInputClasses('input');
           handleSubmit(search);
         }
       }}
@@ -20,19 +23,20 @@ function Search({ handleSubmit }) {
       <CFormLabel htmlFor="search-box" className="visually-hidden">
         Search the dictionary
       </CFormLabel>
-      <div className="inputwrapper" id="inputwrapper">
+      <div className="inputwrapper">
         <CFormInput
           id="search-box"
           placeholder="Search for any word..."
-          className="input"
-          aria-describedby="empty-help"
+          className={inputClasses}
           value={search}
           onChange={(event) => {
             setSearch(event.target.value);
+            setSubmitEmpty(false);
+            setInputClasses('input');
           }}
         >
-          
         </CFormInput>
+
         <button className="searchbutton">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -51,9 +55,12 @@ function Search({ handleSubmit }) {
           </svg>
         </button>
       </div>
-      <CFormText component="span" id="empty-help" className={emptyWarnClasses}>
-        Whoops, can't be empty...
-      </CFormText>
+      {submitEmpty && (
+        <CFormText component="span" className="empty-help">
+          Whoops, can't be empty...
+        </CFormText>
+      )}
+
     </CForm>
   );
 }
