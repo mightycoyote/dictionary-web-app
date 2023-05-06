@@ -32,7 +32,6 @@ function PlayWord({ wordInfo }) {
               <title id="title">Play pronuncation (when available)</title>
               <g className="playsvg" fill="#A445ED" fillRule="evenodd">
                 <circle
-                  className="circle"
                   cx="37.5"
                   cy="37.5"
                   r="37.5"
