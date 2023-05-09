@@ -47,5 +47,8 @@ $c32-to-64: clamp(2rem, 11vw, 4rem);
 $c20-to-24: clamp($s20, 2.5vw, $s24);
 $c24-to-29: clamp($s24, 4vw, $s29);
 
+// header height
+$c32-to-36-5: clamp(2rem, 4.7vw, 2.25rem);
+
 // search box height
-$c48-to-64: clamp(3rem, 8.5vw, 4rem);
+$c48-to-64: clamp(3rem, 9.2vw, 4rem);

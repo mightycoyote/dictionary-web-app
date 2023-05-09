@@ -6,11 +6,11 @@
   /* font-size for the main text (definition bullets) */
   font-size: $c15-to-18;
 
-  /* top padding should go up to 58px, side 32px */
-  padding-top: clamp(1.5rem, 5vmax, 3.625rem);
-  padding-bottom: clamp(1.5rem, 5vmax, 3.625rem);
-  padding-left: clamp(24px, 3vmax, 32px);
-  padding-right: clamp(24px, 3vmax, 32px);
+  /* top padding should go up to 58px, side 40px */
+  padding-top: clamp(1.5rem, 5vw, 3.625rem);
+  padding-bottom: clamp(1.5rem, 5vw, 3.625rem);
+  padding-left: clamp(24px, 6vw, 40px);
+  padding-right: clamp(24px, 6vw, 40px);
 }
 
 .app.sanserif {
@@ -35,18 +35,29 @@
   display: none;
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
+
 // header
 
 header {
   display: flex;
   justify-content: space-between;
   /* should be 32px to 36.5px tall */
-  height: clamp(2rem, 1vw, 2.25rem);
+  height: $c32-to-36-5;
   align-items: center;
+  margin-bottom: 3rem;
+  
+  img {
+    height: $c32-to-36-5;
+  }
 }
 
 .selectors {
   display: flex;
+  align-items: center;
 }
 
 .divider {
@@ -60,7 +71,8 @@ header {
 
 // font select
 
-// this element must be replaced altogether to customize further
+// this element must be replaced altogether to customize further,
+// and accessibility is a huge problem with homebrewed ones
 
 #fontselect {
   font-size: $c14-to-18;
@@ -72,6 +84,7 @@ header {
   background-image: url(./assets/images/icon-arrow-down.svg);
   padding-top: 0;
   padding-bottom: 0;
+  padding-right: 46px;
   cursor: pointer;
 
   &:focus {
@@ -152,6 +165,7 @@ header {
   caret-color: $purple;
   cursor: pointer;
   color: inherit;
+  border: none;
 
   &:focus {
     border: 1px solid $purple;
@@ -230,7 +244,8 @@ header {
 // entry section
 
 .entrysection {
-  margin: 1rem 0;
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
 }
 
 /* line after h2 using pseudoelement borrowed from
@@ -259,7 +274,7 @@ https://codepen.io/danrigsby/pen/waOOvw */
 }
 
 .entrysection h3 {
-  color: var(--gray5);
+  color: $gray5;
   font-weight: 400;
   font-size: $c16-to-20;
   line-height: $c20-to-24;
