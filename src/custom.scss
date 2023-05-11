@@ -41,7 +41,7 @@ $c14-to-18: clamp($s14, 3vw, $s18);
 $c15-to-18: clamp($s15, 3vw, $s18);
 $c16-to-20: clamp(1rem, 3vw, $s20);
 $c18-to-24: clamp($s18, 3vw, $s24);
-$c32-to-64: clamp(2rem, 11vw, 4rem);
+$c32-to-64: clamp(2rem, 8vw, 4rem);
 
 // line-heights
 $c20-to-24: clamp($s20, 2.5vw, $s24);

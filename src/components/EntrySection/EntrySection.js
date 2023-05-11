@@ -25,7 +25,7 @@ function EntrySection({ entry, handleSubmit }) {
 
           {part.synonyms.length > 0 && (
             <div className="synonymssection">
-              <h3 className="synonymsh3">Synonyms</h3>
+              <h3>Synonyms</h3>
               <div>
                 {part.synonyms?.map((synonym) => (
                   <span
