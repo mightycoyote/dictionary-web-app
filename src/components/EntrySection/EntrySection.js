@@ -2,29 +2,28 @@ import React from "react";
 
 function EntrySection({ entry, handleSubmit }) {
   return (
-    <>
+    <React.Fragment>
       {entry.map((part) => (
         <div className="entrysection" key={crypto.randomUUID()}>
           <h2><span>{part.partOfSpeech}</span></h2>
           <div>
             <h3 className="meaningh3">Meaning</h3>
-            {/* if there is an example used in a sentence, it's grouped at the level of each individual definition (bullet), goes with the individual definition */}
             <ul>
               {part.definitions?.map((definition) => (
-                <>
-                  <li key={crypto.randomUUID()}>{definition.definition}</li>
+                <React.Fragment key={crypto.randomUUID()}>
+                  <li>{definition.definition}</li>
                   {definition.example && (
-                    <li key={crypto.randomUUID()} className="example">
+                    <li className="example">
                       "{definition.example}"
                     </li>
                   )}
-                </>
+                </React.Fragment>
               ))}
             </ul>
           </div>
 
           {part.synonyms.length > 0 && (
-            <div className="synonymssection">
+            <div className="synonymssection" >
               <h3>Synonyms</h3>
               <div>
                 {part.synonyms?.map((synonym) => (
@@ -63,7 +62,7 @@ function EntrySection({ entry, handleSubmit }) {
 
         </div>
       ))}
-    </>
+    </React.Fragment>
   );
 }
 

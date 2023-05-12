@@ -3,16 +3,16 @@ import PlayWord from "../PlayWord/PlayWord";
 import EntrySection from "../EntrySection/EntrySection";
 
 function Result({ result, handleSubmit }) {
-  // so really display needs to be for each meaning (there can be multiple) in each array item (there can be multiple)
-  // but, it only needs to read the word, phonetics, and audio once
+  // display needs to be for each meaning (there can be multiple) in each array item (there can be multiple)
+
+  // but, it only needs to read the word, phonetics, and audio once:
   const wordInfo = result[0];
 
+
   const allEntries = result.map((entry) => entry.meanings);
-  // const allEntries2 = ;
 
   // console.log(result);
   // console.log(allEntries);
-  // console.log(allEntries2);
 
   return (
     <>

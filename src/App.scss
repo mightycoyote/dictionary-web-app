@@ -216,6 +216,11 @@ header {
   color: $red;
 }
 
+// CoreUI class - remove border flash when focusing element
+.form-control {
+  transition: none;
+}
+
 // result
 
 .wordheader {
@@ -419,7 +424,7 @@ header {
     background-color: $purple;
   }
 
-  #search-box {
+  .input {
     background-color: $gray2;
   }
 
