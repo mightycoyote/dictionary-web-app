@@ -4,6 +4,7 @@
 
 body {
   overflow: visible;
+  margin: 0;
 }
 
 .app {
@@ -81,6 +82,7 @@ header {
 
 .divider {
   width: 1px;
+  height: $c32-to-36-5;
   background-color: $gray6;
   margin-top: 0px;
   margin-bottom: 0px;
@@ -120,15 +122,15 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: $s20;
-  gap: 10px;
+  // height: $s20;
+  gap: 15px;
   cursor: pointer;
 
   * {
     cursor: inherit;
   }
 
-  svg {
+  .moon {
     height: $s20;
     width: $s20;
   }
@@ -146,21 +148,31 @@ header {
 
 // these are CoreUI classes used for the CSS switch element
 
+.form-check {
+  margin-bottom: 0;
+}
+
+.form-check-input {
+  background-color: $gray5;
+  height: 1.5em;
+
+  &:hover {
+    background-color: $purple;
+  }
+}
+
 .form-switch .form-check-input {
   background-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-4 -4 8 8%27%3e%3ccircle r=%273%27 fill=%27rgba%28255, 255, 255, 1%29%27/%3e%3c/svg%3e");
+  width: 3em;
+
+  &:checked {
+    border-color: none;
+  }
 
   &:focus {
     border-color: $purple;
     box-shadow: none;
     background-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-4 -4 8 8%27%3e%3ccircle r=%273%27 fill=%27rgba%28255, 255, 255, 1%29%27/%3e%3c/svg%3e");
-  }
-}
-
-.form-check-input {
-  background-color: $gray5;
-
-  &:hover {
-    background-color: $purple;
   }
 }
 
@@ -177,6 +189,7 @@ header {
 .input {
   width: 100%;
   font-weight: 700;
+  font-family: inherit;
   height: $c48-to-64;
   font-size: $c16-to-20;
   border-radius: 15px;
@@ -225,6 +238,7 @@ header {
 
 .wordheader {
   margin-top: clamp(1.5rem, 9vw, 3rem);
+  margin-bottom: clamp(1.6rem, 7vw, 2rem);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -232,12 +246,14 @@ header {
   h1 {
     font-weight: 700;
     font-size: $c32-to-64;
+    margin: 0;
   }
 
   p {
     color: $purple;
     font-size: $c18-to-24;
     line-height: $c24-to-29;
+    margin: .5rem 0;
   }
 }
 
@@ -250,6 +266,7 @@ header {
   gap: clamp(10px, 2vw, 20px);
   padding: 1rem 0 3rem;
   border-top: 1px solid $gray3;
+  margin-top: 2rem;
 
   h3 {
     color: $gray5;
@@ -277,8 +294,6 @@ header {
 // entry section
 
 .entrysection {
-  padding-top: 1rem;
-  padding-bottom: 1.5rem;
 
   /* line after h2 using pseudoelement borrowed from
   https://codepen.io/danrigsby/pen/waOOvw */
@@ -314,7 +329,7 @@ header {
   }
 
   ul {
-    margin-bottom: clamp(1.25rem, 5vw, 2rem);
+    margin-bottom: clamp(2rem, 6vw, 3rem);
     padding-left: clamp(0px, 4vw, 40px);
   }
 
@@ -331,7 +346,7 @@ header {
 // if I apply spacing to the "meaning" h3, it has to be done
 // separately from the "synonyms" one
 .meaningh3 {
-  padding-top: clamp(.75rem, 3vw, 1.5rem);
+  padding-top: clamp(.75rem, 3vw, 1.25rem);
   padding-bottom: clamp(.5rem, 2vw, 1rem);
 }
 
@@ -345,6 +360,7 @@ header {
   line-height: $c20-to-24;
   display: flex;
   gap: clamp(10px, 2vw, 20px);
+  padding-bottom: 1rem;
 
   >* {
     margin: 0;

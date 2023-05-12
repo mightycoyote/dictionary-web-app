@@ -1,10 +1,10 @@
-// coreui stylesheets
-@import "../node_modules/@coreui/coreui/scss/coreui";
-
 // fonts
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap");
+
+// coreui custom imports & my variables in order
+@import "../node_modules/@coreui/coreui/scss/functions";
 
 $gray1: #050505;
 $gray2: #1f1f1f;
@@ -22,6 +22,15 @@ $body-color: $gray3;
 $sanserif: "Inter", sans-serif;
 $serif: "Lora", serif;
 $mono: "Inconsolata", monospace;
+
+@import "../node_modules/@coreui/coreui/scss/variables";
+@import "../node_modules/@coreui/coreui/scss/maps";
+@import "../node_modules/@coreui/coreui/scss/mixins";
+@import "../node_modules/@coreui/coreui/scss/root";
+
+@import "../node_modules/@coreui/coreui/scss/forms";
+@import "../node_modules/@coreui/coreui/scss/helpers";
+
 
 $s77: 4.8125rem;
 $s64: 4rem;

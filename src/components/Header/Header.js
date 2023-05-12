@@ -27,7 +27,7 @@ function Header({ font, setFont, darkmodeOn, setDarkmodeOn }) {
 
       <div className="selectors">
         <FontSelect font={font} setFont={setFont} />
-        <div className="divider" />
+        <div className="divider"> </div>
         <DarkModeSelect darkmodeOn={darkmodeOn} setDarkmodeOn={setDarkmodeOn} />
       </div>
     </header>
