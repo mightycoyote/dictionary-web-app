@@ -3,6 +3,7 @@ import { CFormSwitch, CFormLabel } from "@coreui/react";
 
 function DarkModeSelect({ darkmodeOn, setDarkmodeOn }) {
   return (
+    // this handler also changes the mode when you click on the outer component/icon
     <form onClick={() => setDarkmodeOn(!darkmodeOn)} className="darkmodeform">
       <CFormLabel htmlFor="darkmodeswitch" className="visually-hidden">
         Toggle darkmode

@@ -35,8 +35,7 @@ function Search({ handleSubmit, search, setSearch }) {
         >
         </CFormInput>
 
-        <label htmlFor="searchbutton" className="visually-hidden">Submit search</label>
-        <button id="searchbutton">
+        <button id="searchbutton" aria-label="Submit search">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="18"
