@@ -5,7 +5,7 @@ function FontSelect({ font, setFont }) {
   return (
     <form>
       <label htmlFor="fontselect" className="visually-hidden">
-        Font Select
+        Select font
       </label>
       <CFormSelect
         id="fontselect"

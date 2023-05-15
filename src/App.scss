@@ -3,6 +3,7 @@
 /* comp sizes: 375px, 768px, 1440px w/ 736px content width */
 
 body {
+  // adjusted overflow on body and .app to fix bgcolor at bottom
   overflow: visible;
   margin: 0;
 }
@@ -92,16 +93,17 @@ header {
 
 // font select
 
-// this element must be replaced altogether to customize further,
-// and accessibility is a huge problem with homebrewed ones
+// this element must be replaced altogether to customize further.
+// Accessibility is a huge problem with homebrewed ones
 
 #fontselect {
+  font-family: inherit;
   font-size: $c14-to-18;
   font-weight: 700;
   color: inherit;
   background-color: inherit;
   border: none;
-  /* replace CoreUI's custom caret with the one for this design */
+  /* replaces CoreUI's custom caret with the one for this design */
   background-image: url(./assets/images/icon-arrow-down.svg);
   padding-top: 0;
   padding-bottom: 0;
@@ -122,10 +124,10 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  // height: $s20;
   gap: 15px;
   cursor: pointer;
 
+  // CoreUI switch element is made up of numerous parts. This sets the pointer cursor for all of them
   * {
     cursor: inherit;
   }
@@ -146,7 +148,7 @@ header {
   }
 }
 
-// these are CoreUI classes used for the CSS switch element
+// CoreUI classes used for the CSS switch element
 
 .form-check {
   margin-bottom: 0;
@@ -160,6 +162,8 @@ header {
     background-color: $purple;
   }
 }
+
+// CoreUI's svg backgrounds for the switch are inlined here so that I can change the colors
 
 .form-switch .form-check-input {
   background-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-4 -4 8 8%27%3e%3ccircle r=%273%27 fill=%27rgba%28255, 255, 255, 1%29%27/%3e%3c/svg%3e");
@@ -209,7 +213,7 @@ header {
   }
 }
 
-.searchbutton {
+#searchbutton {
   position: absolute;
   margin-right: 14px;
   border: none;
@@ -258,8 +262,7 @@ header {
 }
 
 .source {
-  // places link and new window icon together on the next line
-  // when it doesn't fit next to the h3
+  // places link and new window icon together on the next line when it doesn't fit next to the h3
   font-size: 0.875rem;
   display: flex;
   flex-wrap: wrap;
@@ -343,7 +346,7 @@ header {
   }
 }
 
-// if I apply spacing to the "meaning" h3, it has to be done
+// when I apply spacing to the "meaning" h3, it has to be done
 // separately from the "synonyms" one
 .meaningh3 {
   padding-top: clamp(.75rem, 3vw, 1.25rem);
@@ -373,6 +376,10 @@ header {
     padding: 0 10px;
     display: inline-block;
     cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -405,7 +412,6 @@ header {
   margin-top: clamp(2rem, 10vw, 7rem);
 
   h1 {
-    // font-size: 1.25rem;
     font-size: $c16-to-20;
     font-weight: 700;
     margin-bottom: 2rem;
@@ -416,7 +422,6 @@ header {
   }
 
   .emoji {
-    // font-size: 64px;
     font-size: clamp(2.5rem, 9vw, 4rem);
   }
 }
@@ -451,6 +456,5 @@ header {
     &:hover {
       filter: none;
     }
-
   }
 }

@@ -1,17 +1,20 @@
 import React from "react";
-import { CFormSwitch } from "@coreui/react";
+import { CFormSwitch, CFormLabel } from "@coreui/react";
 
 function DarkModeSelect({ darkmodeOn, setDarkmodeOn }) {
   return (
     <form onClick={() => setDarkmodeOn(!darkmodeOn)} className="darkmodeform">
+      <CFormLabel htmlFor="darkmodeswitch" className="visually-hidden">
+        Toggle darkmode
+      </CFormLabel>
       <CFormSwitch
+        id="darkmodeswitch"
         checked={darkmodeOn}
         onChange={(event) => {
           setDarkmodeOn(event.target.checked);
         }}
       />
       <svg
-        title="Toggle Darkmode"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 22 22"
         height="22px"

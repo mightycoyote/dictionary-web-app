@@ -1,6 +1,6 @@
 import React from "react";
 
-function EntrySection({ entry, handleSubmit }) {
+function EntrySection({ entry, handleSubmit, setSearch }) {
   return (
     <React.Fragment>
       {entry.map((part) => (
@@ -31,6 +31,7 @@ function EntrySection({ entry, handleSubmit }) {
                     key={crypto.randomUUID()}
                     onClick={(event) => {
                       event.preventDefault();
+                      setSearch(synonym);
                       handleSubmit(synonym);
                     }}
                   >
@@ -50,6 +51,7 @@ function EntrySection({ entry, handleSubmit }) {
                     key={crypto.randomUUID()}
                     onClick={(event) => {
                       event.preventDefault();
+                      setSearch(antonym);
                       handleSubmit(antonym);
                     }}
                   >

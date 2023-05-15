@@ -1,8 +1,8 @@
 import React from "react";
 import { CForm, CFormLabel, CFormInput, CFormText } from "@coreui/react";
 
-function Search({ handleSubmit }) {
-  const [search, setSearch] = React.useState("");
+function Search({ handleSubmit, search, setSearch }) {
+  
   const [submitEmpty, setSubmitEmpty] = React.useState(false);
   const [inputClasses, setInputClasses] = React.useState('input');
 
@@ -14,8 +14,6 @@ function Search({ handleSubmit }) {
           setSubmitEmpty(true);
           setInputClasses('input empty');
         } else {
-          // setSubmitEmpty(false);
-          // setInputClasses('input');
           handleSubmit(search);
         }
       }}
@@ -37,7 +35,8 @@ function Search({ handleSubmit }) {
         >
         </CFormInput>
 
-        <button className="searchbutton">
+        <label htmlFor="searchbutton" className="visually-hidden">Submit search</label>
+        <button id="searchbutton">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="18"

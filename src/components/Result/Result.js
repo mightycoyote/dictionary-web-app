@@ -2,7 +2,7 @@ import React from "react";
 import PlayWord from "../PlayWord/PlayWord";
 import EntrySection from "../EntrySection/EntrySection";
 
-function Result({ result, handleSubmit }) {
+function Result({ result, handleSubmit, setSearch }) {
   // display needs to be for each meaning (there can be multiple) in each array item (there can be multiple)
 
   // but, it only needs to read the word, phonetics, and audio once:
@@ -30,6 +30,7 @@ function Result({ result, handleSubmit }) {
         <EntrySection
           entry={entry}
           handleSubmit={handleSubmit}
+          setSearch={setSearch}
           key={crypto.randomUUID()}
         />
       ))}

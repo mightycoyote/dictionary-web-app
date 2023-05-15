@@ -1,5 +1,4 @@
 import React from "react";
-// import "@coreui/coreui/dist/css/coreui.min.css";
 import "./App.scss";
 import Header from "./components/Header";
 import Search from "./components/Search";
@@ -8,6 +7,7 @@ import NoResult from "./components/NoResult/NoResult";
 // import placeholderData from "./placeholderData";
 
 function App() {
+  const [search, setSearch] = React.useState("");
   const ENDPOINT = "https://api.dictionaryapi.dev/api/v2/entries/en/";
   const [status, setStatus] = React.useState("idle");
   const [result, setResult] = React.useState("");
@@ -54,9 +54,9 @@ function App() {
           darkmodeOn={darkmodeOn}
           setDarkmodeOn={setDarkmodeOn}
         />
-        <Search handleSubmit={handleSubmit} />
+        <Search handleSubmit={handleSubmit} search={search} setSearch={setSearch} />
         {status === "error" && <NoResult result={result} />}
-        {status === 'success' && <Result result={result} handleSubmit={handleSubmit} />}
+        {status === 'success' && <Result result={result} handleSubmit={handleSubmit} setSearch={setSearch} />}
       </div>
     </div>
   );
