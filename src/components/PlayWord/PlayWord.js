@@ -27,9 +27,8 @@ function PlayWord({ wordInfo }) {
               // height="75"
               viewBox="0 0 75 75"
               role="img"
-              aria-labelledby="title"
             >
-              <title id="title">Play pronuncation (when available)</title>
+              <title>Play pronuncation (when available)</title>
               <g className="playsvg" fill="#A445ED" fillRule="evenodd">
                 <circle
                   cx="37.5"

@@ -42,12 +42,13 @@ function Result({ result, handleSubmit, setSearch }) {
             {wordInfo.sourceUrls}
           </a>
           <svg
-            title="(opens in a new window)"
+            role="img"
             xmlns="http://www.w3.org/2000/svg"
             width="14"
             height="14"
             viewBox="0 0 14 14"
           >
+            <title>(opens in a new window)</title>
             <path
               fill="none"
               stroke="#838383"

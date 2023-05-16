@@ -8,6 +8,8 @@ function Header({ font, setFont, darkmodeOn, setDarkmodeOn }) {
     <header>
       <div>
         <svg
+          role="img"
+          aria-label="Dictionary search app logo representing a book"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 34 38"
         >

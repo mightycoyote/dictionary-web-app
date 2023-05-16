@@ -21,6 +21,8 @@ function DarkModeSelect({ darkmodeOn, setDarkmodeOn }) {
         height="22px"
         width="22px"
         className="moon"
+        role="img"
+        aria-label="Moon icon"
       >
         <path
           fill="none"
