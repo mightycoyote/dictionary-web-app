@@ -54,9 +54,11 @@ function App() {
           darkmodeOn={darkmodeOn}
           setDarkmodeOn={setDarkmodeOn}
         />
-        <Search handleSubmit={handleSubmit} search={search} setSearch={setSearch} />
-        {status === "error" && <NoResult result={result} />}
-        {status === 'success' && <Result result={result} handleSubmit={handleSubmit} setSearch={setSearch} />}
+        <main>
+          <Search handleSubmit={handleSubmit} search={search} setSearch={setSearch} />
+          {status === "error" && <NoResult result={result} />}
+          {status === 'success' && <Result result={result} handleSubmit={handleSubmit} setSearch={setSearch} />}
+        </main>
       </div>
     </div>
   );

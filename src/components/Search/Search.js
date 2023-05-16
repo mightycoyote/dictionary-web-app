@@ -1,5 +1,5 @@
 import React from "react";
-import { CForm, CFormLabel, CFormInput, CFormText } from "@coreui/react";
+import { CForm, CFormInput, CFormText } from "@coreui/react";
 
 function Search({ handleSubmit, search, setSearch }) {
   
@@ -18,14 +18,12 @@ function Search({ handleSubmit, search, setSearch }) {
         }
       }}
     >
-      <CFormLabel htmlFor="search-box" className="visually-hidden">
-        Search the dictionary
-      </CFormLabel>
       <div className="inputwrapper">
         <CFormInput
           id="search-box"
           placeholder="Search for any word..."
-          role="search"
+          type="search"
+          aria-label="Search the dictionary"
           className={inputClasses}
           value={search}
           onChange={(event) => {
