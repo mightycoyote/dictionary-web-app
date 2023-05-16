@@ -264,7 +264,7 @@ header {
   flex-wrap: wrap;
   gap: clamp(10px, 2vw, 20px);
   padding: 1rem 0 3rem;
-  border-top: 1px solid $gray3;
+  border-top: 1px solid $gray6;
   margin-top: 2rem;
 
   h3 {
@@ -452,5 +452,9 @@ header {
     &:hover {
       filter: none;
     }
+  }
+
+  .source {
+    border-color: $gray3;
   }
 }
