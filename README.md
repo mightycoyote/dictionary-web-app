@@ -39,7 +39,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Dictionary Web App in React, CoreUI, SCSS](https://www.frontendmentor.io/solutions/dictionary-web-app-in-react-coreui-scss-N9tGP4WpLf)
 - Live Site URL: [Dictionary Web App](https://mightycoyote.github.io/dictionary-web-app)
 
 ## My process
