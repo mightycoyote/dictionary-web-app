@@ -25,6 +25,7 @@ function Search({ handleSubmit, search, setSearch }) {
         <CFormInput
           id="search-box"
           placeholder="Search for any word..."
+          role="search"
           className={inputClasses}
           value={search}
           onChange={(event) => {

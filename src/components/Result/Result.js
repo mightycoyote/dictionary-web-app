@@ -15,7 +15,7 @@ function Result({ result, handleSubmit, setSearch }) {
   // console.log(allEntries);
 
   return (
-    <>
+    <main>
       <div className="wordheader">
         <div>
           <h1>{wordInfo.word}</h1>
@@ -59,7 +59,7 @@ function Result({ result, handleSubmit, setSearch }) {
           </svg>
         </div>
       </div>
-    </>
+    </main>
   );
 }
 
