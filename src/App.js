@@ -4,17 +4,17 @@ import Header from "./components/Header";
 import Search from "./components/Search";
 import Result from "./components/Result";
 import NoResult from "./components/NoResult/NoResult";
-// import placeholderData from "./placeholderData";
+import placeholderData from "./placeholderData";
 
 function App() {
   const [search, setSearch] = React.useState("");
   const ENDPOINT = "https://api.dictionaryapi.dev/api/v2/entries/en/";
-  const [status, setStatus] = React.useState("idle");
-  const [result, setResult] = React.useState("");
+  const [status, setStatus] = React.useState("success");
+  const [result, setResult] = React.useState(placeholderData);
   // looks for local prefs
   const [font, setFont] = React.useState(() => {
     const savedPref = localStorage.getItem("dictionaryFont");
-    return savedPref ?? "sanserif";
+    return savedPref ?? "serif";
   });
   // also system prefs for this one
   const [darkmodeOn, setDarkmodeOn] = React.useState(() => {
