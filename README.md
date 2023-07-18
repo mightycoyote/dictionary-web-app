@@ -15,8 +15,6 @@ This is a solution to the [Dictionary web app challenge on Frontend Mentor](http
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -129,7 +127,7 @@ The design spec for this project includes a completely customized select compone
 
 - Website - [Sarah Wilkes](https://mightycoyote.github.io/)
 - Frontend Mentor - [@mightycoyote](https://www.frontendmentor.io/profile/mightycoyote)
-- Mastodon - [@mightycoyote@horrorhub.club](https://horrorhub.club/@mightycoyote)
+- Mastodon - [@mightycoyote@nerdculture.de](https://nerdculture.de/@mightycoyote)
 
 ## Acknowledgments
 
