@@ -255,6 +255,10 @@ header {
 .form-control {
   transition: none;
 }
+// fix CoreUI adding placeholder color in an update
+.form-control::placeholder {
+  color: inherit;
+}
 
 // result
 
